@@ -17,7 +17,10 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedMethods("*");
+        registry.addMapping("/**").allowedMethods("*").allowedOrigins(
+            "http://54.94.247.176:8080",
+            "https://pf-zambas-front.vercel.app/"
+        );
     }
 
     @Bean
